@@ -72,7 +72,7 @@ function CommentComponent({
           content: replyContent,
           entityId,
           parentId: comment.id,
-          _hp: replyHoneypot,
+          website: replyHoneypot,
         }),
       });
       if (res.ok) {
@@ -247,7 +247,7 @@ export default function EntityPage() {
         body: JSON.stringify({
           content: commentText,
           entityId: id,
-          _hp: commentHoneypot,
+          website: commentHoneypot,
         }),
       });
       if (res.ok) {

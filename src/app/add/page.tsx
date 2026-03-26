@@ -67,7 +67,7 @@ export default function AddEntityPage() {
           imageUrl: imageUrl || undefined,
           category,
           tags: tagList.length > 0 ? tagList : undefined,
-          _hp: honeypot,
+          website: honeypot,
         }),
       });
 
