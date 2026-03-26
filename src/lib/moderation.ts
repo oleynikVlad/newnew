@@ -25,7 +25,10 @@ const TOXIC_WORDS = [
 
 export function containsToxicContent(text: string): boolean {
   const lower = text.toLowerCase();
-  return TOXIC_WORDS.some((word) => lower.includes(word));
+  return TOXIC_WORDS.some((word) => {
+    const regex = new RegExp(`\\b${word}\\b`, "i");
+    return regex.test(lower);
+  });
 }
 
 export function sanitizeHtml(text: string): string {
